@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: "League Spartan", sans-serif;
+}
+body{
+width: 100%;
+height: 100vh;
+background-color: hsl(180, 52%, 96%);
+/* display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center; */
+}
+.header{
+width: 100%;
+height: 20%;
+background-image: url(images/bg-header-desktop.svg);
+background-color: hsl(180, 29%, 50%);
+position: relative;
+}
+main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px;
+}
+.jobList{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+}
+.listItem{
+    width: 100%;
+    min-height: 150px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0,0,0.1);
+}
+.jobInfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.infoContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+}
+.companyName{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.name{
+    color: hsl(180, 29%, 50%);
+    font-weight: bold
+}
+.requirements{
+    color: hsl(180, 8%, 52%);
+}
+.technologies{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.technologie{
+    padding: 8px 15px;
+    background-color: hsl(180, 52%, 96%);
+    color: hsl(180, 29%, 50%);
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.new{
+padding: 5px 10px;
+background-color: hsl(180, 29%, 50%);
+color: white;
+font-weight: bold;
+border-radius: 20px;
+}
+.featured{
+  padding: 5px 10px;
+background-color: hsl(180, 14%, 20%);
+color: white;
+font-weight: bold;
+border-radius: 20px;  
+}
+.hidden{
+    display: none !important;
+}
+.filterBar{
+    width: 75%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%,30%);
+}
+.tags{
+ width: 40%;
+ height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.clearBtn{
+    font-size: 20px;
+    color: hsl(180, 8%, 52%);
+    transition: 0.3 ease;
+    cursor: pointer;
+}
+.clearBtn:hover{
+    text-decoration: underline;
+    color: hsl(180, 29%, 50%);
+}
+.tagItem{
+    width: auto;
+    height: 35px;
+    background-color: hsl(180, 52%, 96%);
+    color: hsl(180, 29%, 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.tagItem h2{
+    font-size: 20px;
+    margin-left: 5px;
+}
+.tagItem i{
+    width: 30%;
+    height: 100%;
+    background-color: hsl(180, 29%, 50%);
+    color: white;
+    padding:  5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.position:hover{
+color: hsl(180, 29%, 50%);
+transition: 0.3s ease;
+cursor: pointer;
+}
+
+
+@media (max-width : 845px) {
+    .header{
+      height: 30%;
+    }
+    .jobList{
+        width: 100%;
+    }
+    .filterBar{
+        width: 90%;
+        bottom: 40%;
+    }
+    .tags{
+        width: 70%;
+    }
+}
+@media (max-width : 645px) {
+
+    .header{
+        background-image: url(images/bg-header-mobile.svg);
+        background-size: cover;
+    }
+    main{
+        padding: 20px;
+    }
+    .jobList{
+        width: 100%;
+    }
+    .filterBar{
+        bottom: 30%;
+    }
+    .tags{
+        width: 80%;
+    }
+    .tagItem{
+       height: 20px; 
+    }
+    .tagItem h2{
+        font-size: 15px;
+    }
+    .listItem{
+        flex-direction: column;
+        height: auto;
+        position: relative;
+        padding: 30px;
+        gap: 20px;
+    }
+    .technologies{
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    .jobInfo img{
+        position: absolute;
+        top: 0;
+        left: 10px;
+        width: 50px;
+        transform: translateY(-50%);
+    }
+    .jobInfo{
+        flex-direction: column;
+    }
+    .infoContainer{
+      flex-wrap: wrap;
+    }
+    .position{
+        font-size: 20px;
+    }
+    .companyName{
+        flex-wrap: wrap;
+    }
+}
